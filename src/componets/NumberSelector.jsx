@@ -44,6 +44,10 @@ const Container = styled.div`
   .numContent {
     display: flex;
     gap: 25px;
+
+    @media (max-width: 768px) {
+      gap: 5px;
+    }
   }
   p.error {
     color: red;
@@ -52,6 +56,13 @@ const Container = styled.div`
     text-align: right;
     font-size: 25px;
     font-weight: 500;
+
+    @media (max-width: 768px) {
+      font-size: 18px;
+    }
+    @media (min-width: 767px) and (max-width: 992px) {
+      font-size: 22px;
+    }
   }
 `;
 
@@ -67,4 +78,15 @@ const Box = styled.div`
   cursor: pointer;
   background-color: ${(props) => (props.isSelected ? "black" : "white")};
   color: ${(props) => (!props.isSelected ? "black" : "white")};
+
+  @media (max-width: 768px) {
+    width: 54px;
+    height: 54px;
+    font-size: 20px;
+  }
+  @media (min-width: 767px) and (max-width: 992px) {
+    width: 64px;
+    height: 64px;
+    font-size: 20px;
+  }
 `;

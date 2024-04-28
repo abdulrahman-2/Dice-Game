@@ -33,13 +33,17 @@ export const GamePlay = () => {
 
 const Container = styled.div`
   max-width: 1300px;
-  /* height: 100vh; */
+  padding: 0 20px;
   margin: 50px auto 0;
 
   .top {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
   }
 
   .btns {

@@ -48,20 +48,33 @@ export const RoleDice = () => {
 };
 
 const Container = styled.div`
-  margin-top: 50px;
-  min-width: 1180px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
   .dice-box {
+    text-align: center;
+    margin-top: 50px;
     cursor: pointer;
     text-align: center;
+
+    img {
+      @media (max-width: 768px) {
+        width: 150px;
+        height: 150px;
+      }
+      @media (min-width: 767px) and (max-width: 992px) {
+        width: 200px;
+        height: 200px;
+      }
+    }
 
     p {
       font-size: 24px;
       font-weight: 500;
+
+      @media (max-width: 768px) {
+        font-size: 18px;
+      }
+      @media (min-width: 767px) and (max-width: 992px) {
+        font-size: 22px;
+      }
     }
   }
 `;
