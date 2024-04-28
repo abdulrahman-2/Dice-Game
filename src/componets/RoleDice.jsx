@@ -28,7 +28,7 @@ export const RoleDice = () => {
     if (selectedNum == randomNum) {
       setScore((prev) => prev + randomNum);
     } else {
-      setScore((prev) => prev - selectedNum);
+      setScore((prev) => prev - 2);
     }
 
     setSelectedNum(null);

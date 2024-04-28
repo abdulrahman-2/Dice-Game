@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { DiceContext } from "../context/DiceContext";
 import styled from "styled-components";
+import { Button } from "../styled/Button";
 
 export const StartGame = () => {
   const { setIsGameStarted } = useContext(DiceContext);
@@ -15,7 +16,7 @@ export const StartGame = () => {
       </div>
       <div className="content">
         <h1>Dice Game</h1>
-        <Button onClick={toggleGamePlay}>Play Now</Button>
+        <LeftButton onClick={toggleGamePlay}>Play Now</LeftButton>
       </div>
     </Container>
   );
@@ -23,33 +24,38 @@ export const StartGame = () => {
 
 const Container = styled.div`
   max-width: 1180px;
+  padding: 20px;
   height: 100vh;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+
+  img {
+    width: 100%;
+  }
 
   .content {
     h1 {
       font-size: 96px;
       white-space: nowrap;
+
+      @media (max-width: 768px) {
+        font-size: 60px;
+        margin-top: 50px;
+      }
+      @media (min-width: 767px) and (max-width: 992px) {
+        font-size: 70px;
+      }
     }
   }
 `;
-const Button = styled.button`
-  min-width: 220px;
-  background-color: black;
-  color: white;
-  font-size: 16px;
-  padding: 10px;
-  border-radius: 6px;
+
+const LeftButton = styled(Button)`
   display: block;
   margin-left: auto;
-  cursor: pointer;
-
-  &:hover {
-    background-color: white;
-    color: black;
-    transition: 0.4s all ease-in-out;
-  }
 `;

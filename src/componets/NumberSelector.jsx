@@ -80,8 +80,8 @@ const Box = styled.div`
   color: ${(props) => (!props.isSelected ? "black" : "white")};
 
   @media (max-width: 768px) {
-    width: 54px;
-    height: 54px;
+    width: 50px;
+    height: 50px;
     font-size: 20px;
   }
   @media (min-width: 767px) and (max-width: 992px) {
